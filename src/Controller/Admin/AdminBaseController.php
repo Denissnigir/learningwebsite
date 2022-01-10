@@ -10,5 +10,7 @@ class AdminBaseController extends AbstractController
         return[
           'title'=>'Значение по умолчанию для админа'
         ];
+
+
     }
 }

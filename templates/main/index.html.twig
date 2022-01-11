@@ -3,5 +3,9 @@
     <h1>
         {{ title }}
     </h1>
-    <a href="{{ path('app_login') }}">Войти</a>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a href="{{ path('admin_home') }}">Админ панель</a>
+    {% else %}
+        <a href="{{ path('app_login') }}">Войти</a>
+    {% endif %}
 {% endblock %}
